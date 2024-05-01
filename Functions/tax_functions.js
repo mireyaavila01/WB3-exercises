@@ -9,7 +9,7 @@ function getSocSecTax(grosspay) {
 
 }
 
-console.log(getSocSecTax(5000));
+
 
 
 function getMedicareTax(grosspay) {
@@ -21,7 +21,6 @@ function getMedicareTax(grosspay) {
 
 }
 
-console.log(getMedicareTax(5000));
 
 
 function getFederalTax(grosspay, withholdingCode) {
@@ -44,12 +43,18 @@ function getFederalTax(grosspay, withholdingCode) {
         withholdingCode = .185;
     }
 
+    else (withholdingCode == >4)
+
     
 
     federalTax = grosspay * withholdingCode
     return federalTax;
     
 }
+
+console.log(getSocSecTax(5000));
+
+console.log(getMedicareTax(5000));
 
 console.log(getFederalTax(750,0));
 console.log(getFederalTax(1550,2));
