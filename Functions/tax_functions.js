@@ -43,8 +43,7 @@ function getFederalTax(grosspay, withholdingCode) {
         withholdingCode = .185;
     }
 
-    else (withholdingCode == >4)
-
+    
     
 
     federalTax = grosspay * withholdingCode
