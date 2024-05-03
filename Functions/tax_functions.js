@@ -43,7 +43,11 @@ function getFederalTax(grosspay, withholdingCode) {
         withholdingCode = .185;
     }
 
-    
+   
+    else if (withholdingCode >= 4){
+        withholdingCode = .18 * (withholdingCode - 4)*(0.5);
+    }
+
     
 
     federalTax = grosspay * withholdingCode
@@ -53,7 +57,12 @@ function getFederalTax(grosspay, withholdingCode) {
 
 console.log(getSocSecTax(5000));
 
+console.log("-------------------");
+
 console.log(getMedicareTax(5000));
+
+console.log("-------------------");
+
 
 console.log(getFederalTax(750,0));
 console.log(getFederalTax(1550,2));
