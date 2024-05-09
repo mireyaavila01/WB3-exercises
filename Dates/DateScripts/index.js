@@ -3,7 +3,7 @@
 window.onload = init;
 
 
-let button = document.getElementById("displayBtn")
+const button = document.getElementById("displayBtn")
 
 function init() {
 
@@ -15,8 +15,7 @@ function onDisplayBtnClicked() {
     let output = document.getElementById("dateOutput");
 
     output.innerHTML = date.toString();
-    return;
-
+  
 }
 
 onDisplayBtnClicked();
