@@ -1,17 +1,22 @@
-"use strict"
-
-const dateInput = document.getElementById("dateInput");
-const displayBtn = document.getElementById("displayBtn");
-const dateParagraphOutput = document.getElementById("dataParagraphOutput");
+"use strict";
 
 window.onload = init;
 
-function init(){
-    displayBtn.onclick = onDisplayBtnClicked;
+
+let button = document.getElementById("displayBtn")
+
+function init() {
+
+    button.onclick = onDisplayBtnClicked;
 }
 
-function onDisplayBtnClicked(){
-    let date = (dateInput.value);
+function onDisplayBtnClicked() {
+    let date = document.getElementById("dateInput").value;
+    let output = document.getElementById("dateOutput");
 
-   dateParagraphOutput.innerHTML = date;
+    output.innerHTML = date.toString();
+    return;
+
 }
+
+onDisplayBtnClicked();
